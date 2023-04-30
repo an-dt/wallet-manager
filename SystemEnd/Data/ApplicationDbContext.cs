@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SystemEnd.Models;
 
 namespace SystemEnd.Data
 {
@@ -9,5 +10,9 @@ namespace SystemEnd.Data
             : base(options)
         {
         }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Wallet> Wallets { get; set; }
+        public DbSet<UserInfor> UserInfors { get; set; }
     }
 }
