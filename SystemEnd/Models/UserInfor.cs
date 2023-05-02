@@ -10,9 +10,9 @@ namespace SystemEnd.Models
         [StringLength(450)]
         [Key] 
         public string Id { get; set; }
-        public string UserId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string? UserId { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
         public bool Gender { get; set; }
         public DateTime Birthdate { get; set; }
         public string? Image { get; set; }
@@ -20,7 +20,7 @@ namespace SystemEnd.Models
 
 
         [ForeignKey("UserId")]
-        public virtual IdentityUser User { get; set; }
+        public virtual IdentityUser? User { get; set; }
 
     }
 }

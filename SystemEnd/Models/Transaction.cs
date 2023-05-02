@@ -20,8 +20,8 @@ namespace SystemEnd.Models
         public bool Income { get; set; } = false;
         [StringLength(100, MinimumLength = 3)]
         public string? Note { get; set; }
-        public virtual Category Category { get; set; }
-        public virtual Wallet Wallet { get; set; }
+        public virtual Category? Category { get; set; }
+        public virtual Wallet? Wallet { get; set; }
 
     }
 }
