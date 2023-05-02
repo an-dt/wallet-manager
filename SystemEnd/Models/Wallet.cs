@@ -12,11 +12,14 @@ namespace SystemEnd.Models
         public int Id { get; set; }
         [StringLength(450)]
 
-        public string  UserId { get; set; }
+        public string?  UserId { get; set; }
+
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal Balance { get; set; }
-        public string Name { get; set; }
-        public virtual ICollection<Transaction> Transactions  { get; set; }
+        public string? Name { get; set; }
+        public virtual ICollection<Transaction>? Transactions  { get; set; }
+
         [ForeignKey("UserId")]
-        public virtual IdentityUser User { get; set; }
+        public virtual IdentityUser? User { get; set; }
     }
 }
